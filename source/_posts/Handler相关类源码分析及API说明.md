@@ -8,3 +8,4 @@ date: 2017/2/8 19:05:26
 
 #从Handler最简单的使用说起
 Android开发过程当中最基本的一个原理是不能在主线程中进行耗时操作，主线程通常我们是指ActivityThread
+runWithScissor方法阻塞调用线程直到当前事件处理结束
