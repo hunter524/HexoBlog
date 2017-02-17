@@ -1,0 +1,10 @@
+---
+title: Handler Looper Message MessageQueue源码分析及API说明
+tags: Android常用类源码分析
+date: 2017/2/8 19:05:26
+---
+
+这是笔者的第一篇Android相关技术的博客，首先提供一下基本学习资料获取方式。如果是只需要了解API的基本使用只需要下载Android SDK完整版即可，里面包含了我们日常使用的SDK的源码，看这部分源码通常只需要在Android Studio里面进行简单的配置便可以阅读。同时由于使用的是比较熟悉的开发工具进行阅读代码当然效率也就更高了。但是有一部分FrameWork的代码通常很难使用Android Studio进行索引和查找，此时我们便要单独去下载源码使用其他源码阅读工具进行阅读。[Android FrameWork 源码下载](https://github.com/android/platform_frameworks_base),笔者使用的源码阅读软件为UnderStand4.0当然也可以使用SourceInsight等软件。
+
+#从Handler最简单的使用说起
+Android开发过程当中最基本的一个原理是不能在主线程中进行耗时操作，主线程通常我们是指ActivityThread
